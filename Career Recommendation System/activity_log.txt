@@ -1,0 +1,193 @@
+2025-11-28T14:48:45.147989900: Processing recommendation for: Emmanuel
+2025-11-28T14:48:45.153525200: Found 3 careers for Emmanuel
+2025-11-28T14:48:48.689316900: Processing recommendation for: Emmanuel
+2025-11-28T14:48:48.692755500: Found 4 careers for Emmanuel
+2025-11-28T14:48:54.493412800: Processing recommendation for: Emmanuel
+2025-11-28T14:48:54.495412600: Found 5 careers for Emmanuel
+2025-11-28T14:48:57.331320: Processing recommendation for: Emmanuel
+2025-11-28T14:48:57.333543200: Found 15 careers for Emmanuel
+2025-11-28T14:49:04.384800300: Processing recommendation for: Emmanuel
+2025-11-28T14:49:04.388283100: Found 3 careers for Emmanuel
+2025-11-28T14:54:16.485007400: Processing recommendation for: Emmanuel
+2025-11-28T14:54:16.488960700: Found 3 careers for Emmanuel
+2025-11-28T14:54:19.645319100: Processing recommendation for: Emmanuel
+2025-11-28T14:54:19.649040900: Found 4 careers for Emmanuel
+2025-11-28T14:54:22.369626600: Processing recommendation for: Emmanuel
+2025-11-28T14:54:22.375380600: Found 4 careers for Emmanuel
+2025-11-28T14:54:28.103995100: Processing recommendation for: Emmanuel
+2025-11-28T14:54:28.105977800: Found 2 careers for Emmanuel
+2025-11-28T18:30:22.244259700: Processing recommendation for: Emmanuel
+2025-11-28T18:30:22.254591300: Found 4 careers for Emmanuel
+2025-11-28T18:30:22.264510400: Saved history for: Emmanuel
+2025-11-28T18:30:36.622978200: Processing recommendation for: Emmanuel
+2025-11-28T18:30:36.626996500: Found 6 careers for Emmanuel
+2025-11-28T18:30:36.635811800: Saved history for: Emmanuel
+2025-11-28T18:30:46.044679500: Processing recommendation for: Emmanuel
+2025-11-28T18:30:46.048708400: Found 9 careers for Emmanuel
+2025-11-28T18:30:46.056220400: Saved history for: Emmanuel
+2025-11-28T18:30:50.252575100: Processing recommendation for: Emmanuel
+2025-11-28T18:30:50.254578800: Found 14 careers for Emmanuel
+2025-11-28T18:30:50.260431600: Saved history for: Emmanuel
+2025-11-28T18:31:01.301063700: Processing recommendation for: Emmanuel
+2025-11-28T18:31:01.304065900: Found 1 careers for Emmanuel
+2025-11-28T18:31:01.310789200: Saved history for: Emmanuel
+2025-11-28T18:31:04.016384100: Processing recommendation for: Emmanuel
+2025-11-28T18:31:04.016384100: Found 4 careers for Emmanuel
+2025-11-28T18:31:04.021461400: Saved history for: Emmanuel
+2025-11-28T18:46:26.551452: Processing recommendation for: D
+2025-11-28T18:46:26.553413600: Database Error: no such column: 'salary'
+2025-11-28T18:46:29.687426200: Processing recommendation for: D
+2025-11-28T18:46:29.689409300: Database Error: no such column: 'salary'
+2025-11-28T18:49:13.326868100: Processing recommendation for: d
+2025-11-28T18:49:13.339812: Found 2 careers for d
+2025-11-28T18:49:13.351462800: Saved history for: d
+2025-11-28T20:42:05.577429600: Processing recommendation for: Emmanuel
+2025-11-28T20:42:05.584483600: Found 3 careers for Emmanuel
+2025-11-28T20:42:05.589006900: Saved history for: Emmanuel
+2025-11-28T20:42:22.606031800: Processing recommendation for: Emmanuel
+2025-11-28T20:42:22.608547700: Found 5 careers for Emmanuel
+2025-11-28T20:42:22.616150200: Saved history for: Emmanuel
+2025-11-28T20:42:28.051027800: Processing recommendation for: Emmanuel
+2025-11-28T20:42:28.054799900: Found 6 careers for Emmanuel
+2025-11-28T20:42:28.061876: Saved history for: Emmanuel
+2025-11-28T20:42:33.313660300: Processing recommendation for: Emmanuel
+2025-11-28T20:42:33.318718500: Found 4 careers for Emmanuel
+2025-11-28T20:42:33.326554400: Saved history for: Emmanuel
+2025-11-28T20:42:36.385374500: Processing recommendation for: Emmanuel
+2025-11-28T20:42:36.388950200: Found 3 careers for Emmanuel
+2025-11-28T20:42:36.394164900: Saved history for: Emmanuel
+2025-11-28T20:49:13.675747: Processing recommendation for: Emmanuel
+2025-11-28T20:49:13.689055600: Found 2 careers for Emmanuel
+2025-11-28T20:49:13.699543700: Saved history for: Emmanuel
+2025-11-28T20:49:23.673506400: Processing recommendation for: Emmanuel
+2025-11-28T20:49:23.675528900: Found 3 careers for Emmanuel
+2025-11-28T20:49:23.682193900: Saved history for: Emmanuel
+2025-11-28T20:49:29.075471100: Processing recommendation for: Emmanuel
+2025-11-28T20:49:29.079477100: Found 5 careers for Emmanuel
+2025-11-28T20:49:29.087802300: Saved history for: Emmanuel
+2025-11-28T20:49:32.855251200: Processing recommendation for: Emmanuel
+2025-11-28T20:49:32.859246300: Found 2 careers for Emmanuel
+2025-11-28T20:49:32.868853600: Saved history for: Emmanuel
+2025-11-28T20:49:36.885873600: Processing recommendation for: Emmanuel
+2025-11-28T20:49:36.888869800: Found 3 careers for Emmanuel
+2025-11-28T20:49:36.895549900: Saved history for: Emmanuel
+2025-11-28T20:49:39.990678800: Processing recommendation for: Emmanuel
+2025-11-28T20:49:39.993297900: Found 5 careers for Emmanuel
+2025-11-28T20:49:39.997798900: Saved history for: Emmanuel
+2025-11-28T20:49:43.544814600: Processing recommendation for: Emmanuel
+2025-11-28T20:49:43.548314500: Found 6 careers for Emmanuel
+2025-11-28T20:49:43.553321800: Saved history for: Emmanuel
+2025-11-28T20:49:51.414339900: Processing recommendation for: Emmanuel
+2025-11-28T20:49:51.416340400: Found 1 careers for Emmanuel
+2025-11-28T20:49:51.421217800: Saved history for: Emmanuel
+2025-11-28T20:49:57.336088500: Processing recommendation for: Emmanuel
+2025-11-28T20:49:57.339083300: Found 4 careers for Emmanuel
+2025-11-28T20:49:57.348664100: Saved history for: Emmanuel
+2025-11-28T20:56:52.665670500: Processing recommendation for: l
+2025-11-28T20:56:52.680637500: Found 2 careers for l
+2025-11-28T20:56:52.690853300: Saved history for: l
+2025-11-28T21:03:04.710720900: Processing recommendation for: Emmanuel
+2025-11-28T21:03:04.720947300: Found 2 careers for Emmanuel
+2025-11-28T21:03:04.732388100: Saved history for: Emmanuel
+2025-11-28T21:03:09.765801900: Processing recommendation for: Emmanuel
+2025-11-28T21:03:09.767884: Found 1 careers for Emmanuel
+2025-11-28T21:03:09.776928500: Saved history for: Emmanuel
+2025-11-28T21:03:13.430956700: Processing recommendation for: Emmanuel
+2025-11-28T21:03:13.434470300: Found 1 careers for Emmanuel
+2025-11-28T21:03:13.442999200: Saved history for: Emmanuel
+2025-11-28T21:03:20.785167700: Processing recommendation for: Emmanuel
+2025-11-28T21:03:20.786158100: Found 1 careers for Emmanuel
+2025-11-28T21:03:20.793520600: Saved history for: Emmanuel
+2025-11-28T21:08:40.204675300: Processing recommendation for: l
+2025-11-28T21:08:40.218387200: Found 1 careers for l
+2025-11-28T21:08:40.225553800: Saved history for: l
+2025-11-28T21:09:01.363124200: Cleared all history
+2025-11-28T21:13:23.350497: Processing recommendation for: Emmanuel
+2025-11-28T21:13:23.369066300: Found 2 careers for Emmanuel
+2025-11-28T21:13:23.378286300: Saved history for: Emmanuel
+2025-11-28T21:13:27.131301900: Processing recommendation for: Emmanuel
+2025-11-28T21:13:27.135058600: Found 3 careers for Emmanuel
+2025-11-28T21:13:27.141650500: Saved history for: Emmanuel
+2025-11-28T21:24:54.727127200: Processing recommendation for: Emmanuel
+2025-11-28T21:24:54.738821800: Found 2 careers for Emmanuel
+2025-11-28T21:24:54.746417700: Saved history for: Emmanuel
+2025-11-28T21:25:00.605204200: Processing recommendation for: Emmanuel
+2025-11-28T21:25:00.607209400: Found 3 careers for Emmanuel
+2025-11-28T21:25:00.614446400: Saved history for: Emmanuel
+2025-11-28T21:25:06.602146200: Processing recommendation for: Emmanuel
+2025-11-28T21:25:06.603161100: Found 4 careers for Emmanuel
+2025-11-28T21:25:06.608793100: Saved history for: Emmanuel
+2025-11-28T21:25:55.805277700: Processing recommendation for: Emmanuel
+2025-11-28T21:25:55.813035100: Found 2 careers for Emmanuel
+2025-11-28T21:25:55.821119300: Saved history for: Emmanuel
+2025-11-28T21:26:01.055637900: Processing recommendation for: Emmanuel
+2025-11-28T21:26:01.057637700: Found 3 careers for Emmanuel
+2025-11-28T21:26:01.064346: Saved history for: Emmanuel
+2025-11-28T21:26:17.190406600: Cleared all history
+2025-11-28T23:23:00.684117700: Processing recommendation for: Emmanuel
+2025-11-28T23:23:00.695727400: Found 3 careers for Emmanuel
+2025-11-28T23:23:00.706907400: Saved history for: Emmanuel
+2025-11-28T23:23:14.903558800: Processing recommendation for: Emmanuel
+2025-11-28T23:23:14.907561: Found 5 careers for Emmanuel
+2025-11-28T23:23:14.916970900: Saved history for: Emmanuel
+2025-11-28T23:23:20.454663200: Processing recommendation for: Emmanuel
+2025-11-28T23:23:20.457669300: Found 6 careers for Emmanuel
+2025-11-28T23:23:20.465774: Saved history for: Emmanuel
+2025-11-28T23:23:26.721398800: Processing recommendation for: Emmanuel
+2025-11-28T23:23:26.726437: Found 8 careers for Emmanuel
+2025-11-28T23:23:26.732761900: Saved history for: Emmanuel
+2025-11-28T23:56:35.793619600: Processing recommendation for: Emmanuel
+2025-11-28T23:56:35.804809600: Found 1 careers for Emmanuel
+2025-11-28T23:56:35.809341: Saved history for: Emmanuel
+2025-11-28T23:56:57.021317200: Cleared all history
+2025-11-29T00:20:07.676661600: Error fetching skills: No suitable driver found for jdbc:sqlite:careers.db
+2025-11-29T00:21:24.818405800: Processing recommendation for: Emmanuel
+2025-11-29T00:21:24.828268: Found 3 careers for Emmanuel
+2025-11-29T00:21:24.840602700: Saved history for: Emmanuel
+2025-11-29T00:21:29.478425: Processing recommendation for: Emmanuel
+2025-11-29T00:21:29.479965600: Found 4 careers for Emmanuel
+2025-11-29T00:21:29.484471800: Saved history for: Emmanuel
+2025-11-29T00:29:27.751293200: Cleared all history
+2025-11-29T00:31:20.229160400: Processing recommendation for: l
+2025-11-29T00:31:20.240309200: Found 2 careers for l
+2025-11-29T00:31:20.249323100: Saved history for: l
+2025-11-29T00:31:49.122867100: Processing recommendation for: lo
+2025-11-29T00:31:49.133488: Found 4 careers for lo
+2025-11-29T00:31:49.144754800: Saved history for: lo
+2025-11-29T00:31:51.837142200: Processing recommendation for: lo
+2025-11-29T00:31:51.841535100: Found 5 careers for lo
+2025-11-29T00:31:51.851399800: Saved history for: lo
+2025-11-29T00:31:53.590840800: Processing recommendation for: lo
+2025-11-29T00:31:53.601663700: Found 2 careers for lo
+2025-11-29T00:31:53.607461900: Saved history for: lo
+2025-11-29T00:31:58.600492200: Processing recommendation for: lo
+2025-11-29T00:31:58.603572500: Found 1 careers for lo
+2025-11-29T00:31:58.609339700: Saved history for: lo
+2025-11-29T00:32:00.953638500: Processing recommendation for: lo
+2025-11-29T00:32:00.956157300: Found 2 careers for lo
+2025-11-29T00:32:00.965686200: Saved history for: lo
+2025-11-29T00:32:03.070781: Processing recommendation for: lo
+2025-11-29T00:32:03.073044100: Found 4 careers for lo
+2025-11-29T00:32:03.081577400: Saved history for: lo
+2025-11-29T00:32:05.165632300: Processing recommendation for: lo
+2025-11-29T00:32:05.169199: Found 7 careers for lo
+2025-11-29T00:32:05.177473400: Saved history for: lo
+2025-11-29T00:32:07.690984: Processing recommendation for: lo
+2025-11-29T00:32:07.692605: Found 2 careers for lo
+2025-11-29T00:32:07.702095500: Saved history for: lo
+2025-11-29T00:32:20.416221200: Cleared all history
+2025-11-29T16:49:30.247556700: Processing recommendation for: Emmanuel
+2025-11-29T16:49:30.258299300: Found 5 careers for Emmanuel
+2025-11-29T16:49:30.265344400: Saved history for: Emmanuel
+2025-11-29T16:50:29.896778: Processing recommendation for: Aaron
+2025-11-29T16:50:29.899790500: Found 3 careers for Aaron
+2025-11-29T16:50:29.908064200: Saved history for: Aaron
+2025-11-29T16:50:39.650711400: Processing recommendation for: Ammaar
+2025-11-29T16:50:39.653227600: Found 4 careers for Ammaar
+2025-11-29T16:50:39.661847: Saved history for: Ammaar
+2025-11-30T12:40:24.362149300: Processing recommendation for: Bob
+2025-11-30T12:40:24.377742300: Found 5 careers for Bob
+2025-11-30T12:40:24.388948100: Saved history for: Bob
+2025-11-30T13:24:41.144302300: Processing recommendation for: Joseph
+2025-11-30T13:24:41.161981500: Found 1 careers for Joseph
+2025-11-30T13:24:41.166911400: Saved history for: Joseph

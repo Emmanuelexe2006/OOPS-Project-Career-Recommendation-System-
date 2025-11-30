@@ -1,0 +1,402 @@
+================================================================================
+  AI-BASED CAREER RECOMMENDATION SYSTEM - CODE EXPLANATION
+================================================================================
+
+PROJECT OVERVIEW
+----------------
+This is a Java-based desktop application that recommends careers based on user 
+skills. It features a modern dark-themed GUI with neon effects, skill search 
+functionality, and SQLite database integration.
+
+
+SYSTEM ARCHITECTURE
+-------------------
+The application follows a layered architecture:
+1. Presentation Layer (GUI) - CareerGui.java
+2. Business Logic Layer - CareerEngine.java
+3. Data Access Layer - SQLite Database
+4. Model Classes - Person.java, Applicant.java
+5. Utilities - DatabaseSetup.java, AdminCLI.java
+
+
+================================================================================
+FILE-BY-FILE EXPLANATION
+================================================================================
+
+1. Main.java
+------------
+PURPOSE: Application entry point
+FUNCTIONALITY:
+  - Initializes the SQLite database
+  - Launches the GUI on the Event Dispatch Thread (EDT)
+  - Uses SwingUtilities.invokeLater() for thread-safe GUI creation
+
+KEY CODE:
+  DatabaseSetup.initializeDatabase();  // Creates/populates database
+  new CareerGui().setVisible(true);     // Shows main window
+
+
+2. CareerGui.java
+-----------------
+PURPOSE: Main graphical user interface
+COMPONENTS:
+  - Dark-themed UI with custom colors (BG_COLOR, CARD_COLOR, ACCENT_COLOR)
+  - Left panel: User input (name, age, skills)
+  - Right panel: Career recommendations
+  
+KEY FEATURES:
+  a) Skill Search Bar:
+     - Real-time filtering as user types
+     - Filters skills using case-insensitive contains matching
+     - filterSkills(String searchText) method
+  
+  b) Skill Selection:
+     - Checkboxes with custom dark icons
+     - "Deselect All" button to clear selections
+     - Scrollable list of all available skills
+  
+  c) Neon Glow Effects:
+     - Best match recommendation has multi-layer glow effect
+     - Custom paintComponent() override for visual effects
+     - Uses Graphics2D with antialiasing for smooth rendering
+  
+  d) Custom UI Elements:
+     - DarkCheckBoxIcon: Custom checkbox appearance
+     - DarkScrollBarUI: Minimal dark scrollbar
+     - Blended text fields with underline borders
+     - Rounded accent-colored buttons
+
+METHOD BREAKDOWN:
+  - refreshSkills(): Loads all skills from database
+  - filterSkills(String): Filters skills based on search text
+  - deselectAllSkills(): Unchecks all skill checkboxes
+  - getRecommendations(): Validates input and calls recommendation engine
+  - updateResults(List<String>): Displays career matches with neon effects
+  - createPrimaryButton(String): Creates green accent buttons
+  - createBlendedField(): Creates dark-themed text fields
+
+
+3. CareerEngine.java
+--------------------
+PURPOSE: Core recommendation logic and database operations
+IMPLEMENTS: RecommenderInterface
+
+KEY METHODS:
+  a) recommend(Applicant applicant):
+     - Retrieves all careers from database
+     - Converts user skills to lowercase for matching
+     - Splits skills by comma into arrays
+     - Compares each career's required skills with user skills
+     - Counts matches for each career
+     - Creates CareerScore objects (title + score)
+     - Sorts careers by match score (descending)
+     - Returns sorted list of career titles
+  
+  b) getAllSkills():
+     - Queries database for all career skills
+     - Splits comma-separated skills
+     - Returns unique, sorted list of all skills
+  
+  c) addCareer(String, String, String):
+     - Inserts new career into database
+     - Used by admin interface
+     - Uses PreparedStatement to prevent SQL injection
+  
+  d) logActivity(String):
+     - Writes timestamped log entries to activity_log.txt
+     - Tracks user actions and errors
+
+ALGORITHM EXPLANATION:
+  Skill Matching Algorithm:
+  1. For each career in database:
+     - Get required skills (comma-separated string)
+     - Split into individual skills
+     - For each required skill:
+       * Check if user has this skill
+       * Increment match counter if found
+     - If matches > 0, add to results with score
+  2. Sort results by match score (highest first)
+  3. Return career titles in sorted order
+
+INNER CLASS:
+  - CareerScore: Helper class to store career title and match count
+
+
+4. RecommenderInterface.java
+-----------------------------
+PURPOSE: Contract for recommendation systems
+DEFINES: recommend(Applicant) method signature
+BENEFIT: Allows for multiple recommendation implementations
+
+
+5. Person.java
+--------------
+PURPOSE: Base class representing a person
+ATTRIBUTES:
+  - name: String (person's full name)
+  - age: int (person's age)
+METHODS:
+  - Getters and setters for name and age
+
+
+6. Applicant.java
+-----------------
+PURPOSE: Represents job applicant (extends Person)
+EXTENDS: Person
+ADDITIONAL ATTRIBUTE:
+  - skills: String (comma-separated list of skills)
+METHODS:
+  - getSkills(), setSkills()
+  - Inherits name and age from Person
+
+
+7. NoCareerFoundException.java
+-------------------------------
+PURPOSE: Custom exception for no matching careers
+EXTENDS: Exception
+USAGE: Thrown when no careers match user's skills
+
+
+8. DatabaseSetup.java
+---------------------
+PURPOSE: Database initialization and population
+FUNCTIONALITY:
+  - Creates careers.db SQLite database
+  - Creates careers table if not exists
+  - Populates database with 50+ professional careers
+  
+TABLE STRUCTURE:
+  careers (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    skills TEXT NOT NULL,
+    description TEXT
+  )
+
+CAREERS INCLUDED:
+  - Technology: Software Developer, Data Scientist, Cybersecurity Analyst
+  - Creative: Graphic Designer, UX Designer, Content Writer
+  - Business: Marketing Manager, Product Manager, Business Analyst
+  - Healthcare: Nurse, Physical Therapist, Healthcare Administrator
+  - Engineering: Civil Engineer, Electrical Engineer, Mechanical Engineer
+  - And many more...
+
+
+9. AdminCLI.java
+----------------
+PURPOSE: Command-line interface for administrators
+FUNCTIONALITY:
+  - View all careers in database
+  - Add new careers
+  - Interactive menu-driven interface
+  
+MENU OPTIONS:
+  1. View All Careers - Lists all career records
+  2. Add New Career - Prompts for title, skills, description
+  3. Exit - Quits admin interface
+
+
+================================================================================
+DATABASE DETAILS
+================================================================================
+
+DATABASE FILE: careers.db (SQLite)
+CONNECTION STRING: jdbc:sqlite:careers.db
+
+CAREERS TABLE SCHEMA:
+  +-------------+----------+------------+
+  | Column      | Type     | Constraint |
+  +-------------+----------+------------+
+  | id          | INTEGER  | PRIMARY KEY|
+  | title       | TEXT     | NOT NULL   |
+  | skills      | TEXT     | NOT NULL   |
+  | description | TEXT     |            |
+  +-------------+----------+------------+
+
+SAMPLE DATA:
+  title: "Software Developer"
+  skills: "java,python,problem solving,algorithms"
+  description: "Design and develop software applications..."
+
+
+================================================================================
+HOW THE SYSTEM WORKS
+================================================================================
+
+USER WORKFLOW:
+1. User launches application (double-click RUN_APPLICATION.bat)
+2. Database initializes with career data
+3. GUI displays with dark theme
+4. User enters:
+   - Full name
+   - Age
+   - Searches for and selects relevant skills
+5. User clicks "Find Careers" button
+6. System:
+   - Validates input (checks for empty fields)
+   - Creates Applicant object
+   - Calls CareerEngine.recommend()
+   - Matches skills against all careers
+   - Sorts by best match
+7. Results display:
+   - Best match highlighted with neon green glow
+   - "BEST MATCH" label at top
+   - Other recommendations listed below
+
+SKILL MATCHING EXAMPLE:
+  User skills: ["java", "python", "problem solving"]
+  
+  Career A: "Software Developer"
+    Required: ["java", "python", "algorithms"]
+    Matches: 2 (java, python) → Score: 2
+  
+  Career B: "Data Scientist"  
+    Required: ["python", "statistics", "machine learning"]
+    Matches: 1 (python) → Score: 1
+  
+  Result: Career A ranked first (higher score)
+
+
+================================================================================
+TECHNICAL DETAILS
+================================================================================
+
+LIBRARIES USED:
+1. Swing (javax.swing.*) - GUI components
+2. AWT (java.awt.*) - Graphics and layout
+3. JDBC (java.sql.*) - Database connectivity
+4. SQLite JDBC Driver (sqlite-jdbc-3.42.0.0.jar)
+
+DESIGN PATTERNS:
+1. Interface Pattern - RecommenderInterface
+2. Inheritance - Person → Applicant
+3. MVC-like Separation - GUI (View) + Engine (Controller) + Database (Model)
+4. Custom Exception Handling - NoCareerFoundException
+
+COLOR SCHEME:
+- Background: RGB(18, 18, 18) - Deep dark gray
+- Card: RGB(30, 30, 30) - Lighter dark gray
+- Text Primary: RGB(255, 255, 255) - White
+- Text Secondary: RGB(170, 170, 170) - Light gray
+- Accent: RGB(29, 185, 84) - Spotify green
+
+NEON GLOW IMPLEMENTATION:
+- Multi-layer rendering in paintComponent()
+- Decreasing alpha values for fade effect
+- Rounded rectangles for smooth edges
+- Graphics2D antialiasing for quality
+
+
+================================================================================
+HOW TO RUN THE APPLICATION
+================================================================================
+
+REQUIREMENTS:
+- Java Development Kit (JDK) 8 or higher
+- Windows Operating System
+
+STEPS:
+1. Ensure Java is installed:
+   - Open Command Prompt
+   - Type: java -version
+   - Should show Java version
+
+2. Navigate to project folder
+
+3. Double-click RUN_APPLICATION.bat
+   OR
+   Open Command Prompt and run:
+   RUN_APPLICATION.bat
+
+4. The batch file will:
+   - Compile all .java files
+   - Start the application
+   - Display any errors if compilation fails
+
+
+MANUAL COMPILATION (if needed):
+  javac -encoding UTF-8 -cp ".;sqlite-jdbc-3.42.0.0.jar" *.java
+  java -cp ".;sqlite-jdbc-3.42.0.0.jar" Main
+
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+PROBLEM: "javac is not recognized"
+SOLUTION: Install JDK and add to system PATH
+
+PROBLEM: "ClassNotFoundException: org.sqlite.JDBC"
+SOLUTION: Ensure sqlite-jdbc-3.42.0.0.jar is in same folder
+
+PROBLEM: No careers displayed
+SOLUTION: Check that careers.db exists and contains data
+
+PROBLEM: Weird symbols in text
+SOLUTION: File uses UTF-8 encoding, ensure javac -encoding UTF-8
+
+PROBLEM: Database locked
+SOLUTION: Close any other instances of the application
+
+
+================================================================================
+EXTENDING THE SYSTEM
+================================================================================
+
+TO ADD NEW CAREERS:
+1. Run AdminCLI.java
+2. Select "Add New Career"
+3. Enter title, skills (comma-separated), description
+
+TO MODIFY UI COLORS:
+1. Open CareerGui.java
+2. Change static final Color constants at top
+3. Recompile
+
+TO CHANGE MATCHING ALGORITHM:
+1. Open CareerEngine.java
+2. Modify recommend() method logic
+3. Implement weighted scoring, fuzzy matching, etc.
+
+TO ADD NEW FEATURES:
+- User profiles: Store user data in database
+- Career details: Show full description on click
+- Export results: Save recommendations to PDF/text
+- Analytics: Track most recommended careers
+
+
+================================================================================
+PROJECT STATISTICS
+================================================================================
+
+Files: 9 Java files + 1 database + 1 JAR library
+Lines of Code: ~1,500 (excluding library)
+Total Careers: 50+
+Total Skills: 100+ unique skills
+UI Elements: 6 major panels, custom components
+Database Tables: 1 main table (careers)
+
+
+================================================================================
+AUTHOR NOTES
+================================================================================
+
+This system demonstrates:
+✓ Database-driven applications
+✓ Custom UI design in Swing
+✓ Skill-based recommendation algorithms
+✓ Exception handling
+✓ File I/O and logging
+✓ Object-oriented programming principles
+✓ Clean code architecture
+
+The application is designed to be:
+- User-friendly with modern aesthetics
+- Extensible for future enhancements
+- Educational for learning Java concepts
+- Practical for real career exploration
+
+
+================================================================================
+END OF DOCUMENTATION
+================================================================================
